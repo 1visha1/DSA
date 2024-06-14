@@ -1,13 +1,18 @@
-public class SolidRhombus{
-    public static int pattern(int n){
-
+public class HollowRhumbus{
+    public static int patern(int n){
 
         for(int i=0;i<n;i++){
             for(int j=0;j<(n-i)-1;j++){
                 System.out.print(" ");
             }
             for(int j=0;j<n;j++){
-                System.out.print("*");
+                
+                if(i==0||j==0||i==n-1||j==n-1){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
             }
             System.out.println();
         }
@@ -15,6 +20,6 @@ public class SolidRhombus{
     }
 
     public static void main(String... args){
-          pattern(5);
+        patern(5);
     }
 }
